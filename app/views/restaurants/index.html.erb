@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="display-4">Restaurants</h1>
+
+<div class="row" id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-md-4 mb-4">
+      <div class="card shadow">
+        <%= render restaurant %>
+        <div class="card-body" class="bottom">
+          <p>
+            <%= link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div  class="btn btn-primary"><%= link_to "New restaurant", new_restaurant_path, class: "btn btn-primary" %></div>
